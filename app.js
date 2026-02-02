@@ -5,6 +5,6 @@ document.getElementById("nameForm").addEventListener("submit", function (e) {
 
       if (name) {
         localStorage.setItem("animatedName", name);
-        window.location.href = "animation/animation.html";
+        window.location.href = "animation.html";
       }
     });
