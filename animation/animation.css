@@ -1,0 +1,78 @@
+body {
+  font-family: "Segoe UI", sans-serif;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  height: 95vh;
+
+  background-image: url("/poster.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.15);
+  z-index: -2;
+}
+
+
+.invite-text::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(255,255,255,0.08),
+    transparent
+  );
+  animation: lightSweep 6s infinite;
+  pointer-events: none;
+}
+
+
+.blur-text {
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.blur-char {
+  display: inline-block;
+  opacity: 0;
+  filter: blur(8px);
+  transform: translateY(-20px);
+  animation: charReveal 0.5s ease forwards;
+}
+
+
+.text-2xl, .heading {
+  font-size: 2rem;
+  color: rgb(187, 231, 115);
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.heading {
+  color: rgb(0, 0, 0);
+}
+
+.mb-8 {
+  margin-bottom: 2rem;
+}
+
+@keyframes charReveal {
+  to {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateY(0);
+  }
+}
+
+
