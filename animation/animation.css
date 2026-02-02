@@ -76,3 +76,12 @@ body::before {
 }
 
 
+/* Mobile phones */
+@media (max-width: 768px) {
+  body {
+    background-image: url("/poster-phone.png");
+    background-position: center top;
+    background-size: cover;
+    background-attachment: scroll;
+  }
+}
